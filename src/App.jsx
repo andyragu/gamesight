@@ -1,14 +1,24 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 import React from "react";
+=======
+import React, { useState } from "react";
+>>>>>>> main
 import {Login} from "./Components/Login";
 import {Register} from "./Components/register";
 
 function App() {
 
+  const [currentForm, setCurrentForm] = useState('login');
+  const toggleForm = (formName) => {
+    setCurrentForm(formName);
+  }
+
   return (
     <div className="App">
-      <Login />
-      <Register />
+      {
+        currentForm === "login" ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
+      }
     </div>
   );
 }
