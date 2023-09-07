@@ -1,17 +1,19 @@
 <<<<<<< Updated upstream
 import React from "react";
-import {Login} from './Components/Login.jsx';
-import {Register} from './Components/register.jsx';
+import {Login} from "./Components/Login";
+import {Register} from "./Components/register";
 
 function App() {
 
   return (
     <div className="App">
       <Login />
+      <Register />
     </div>
   );
 }
 
+<<<<<<< HEAD
 
 =======
 export default function App() {
@@ -23,3 +25,6 @@ export default function App() {
   )
 }
 >>>>>>> Stashed changes
+=======
+export default App
+>>>>>>> main
