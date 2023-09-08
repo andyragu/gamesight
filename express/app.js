@@ -8,3 +8,5 @@ app.get('/',(req,res) => {
 app.listen(4000, () =>{
     console.log("listening to port 4000")
 });
+
+export default app
