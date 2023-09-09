@@ -1,29 +1,33 @@
-import {useState} from "react";
+import React, { useState } from 'react';
+import './Register.css';
 
 export const Register = (props) => {
+    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
-    const [userName, setUserName] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email);
     }
 
     return (
-        <>
-        <form onSubmit = {handleSubmit} action="http://localhost:8000/collectData" method="post">
-            <label html="UserName">Username</label>
-            <input value = {userName} onChange = {(e) => setEmail(e.target.value)} type ="UserName" placeholder = "username" id = "UserName" name = "UserName"/>
+        <div className="login-container"> {/* This uses the same container class as Login for consistency */}
+            <div className="register-box">
+                <h2 className="login-title">Register for gamesight...</h2>
+                <form onSubmit = {handleSubmit} action="http://localhost:8000/collectData" method="post">
+                    <label htmlFor="username">Username</label>
+                    <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" id="username" name="username" />
 
-            <label htmlFor="email">E-mail</label>
-            <input value = {email} onChange = {(e) => setEmail(e.target.value)} type = "email" placeholder = "email" id = "email" name = "email"/>
+                    <label htmlFor="email">E-mail</label>
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" id="email" name="email" />
 
-            <label htmlFor="password">Password</label>
-            <input value = {pass} onChange = {(e) => setPass(e.target.value)} type = "password" placeholder = "password" id = "password" name = "password"/>
-            <button type = "submit">login</button>
-        </form>
-        <div>Already have an Account?</div><button onClick={() => props.onFormSwitch('login')}>Login here.</button><div/>
-        </>
+                    <label htmlFor="password">Password</label>
+                    <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" id="password" name="password" />
+
+                    <button type="submit" className="login-button">Register</button>
+                </form>
+                <div className="register-text">Already have an account? <span onClick={() => props.onFormSwitch('login')}>Log in to gamesight</span></div>
+            </div>
+        </div>
     )
 }

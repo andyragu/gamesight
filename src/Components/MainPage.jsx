@@ -5,7 +5,7 @@ function MainPage(props) {
     return (
         <div>
             <div className="header">
-                <h1>GameSight</h1>
+                <h1>gamesight</h1>
                 <div className="login-option" onClick={() => props.onFormSwitch('login')}>Login</div>
             </div>
             <div className="middle-content">
