@@ -12,7 +12,7 @@ export const Register = (props) => {
 
     return (
         <>
-        <form onSubmit = {handleSubmit}>
+        <form onSubmit = {handleSubmit} action="http://localhost:8000/collectData" method="post">
             <label html="UserName">Username</label>
             <input value = {userName} onChange = {(e) => setEmail(e.target.value)} type ="UserName" placeholder = "username" id = "UserName" name = "UserName"/>
 
