@@ -24,8 +24,8 @@ export const Login = (props) => {
                     <button type="submit" className="login-button">Login</button>
                 </form>
                 <div className="register-text">
-                  Don't have an account? 
-                  <span style={{ cursor: 'pointer', textDecoration: 'underline' }} onClick={() => props.onFormSwitch('register')}>Sign up for gamesight</span>
+                  Don't have an account?  
+                  <span style={{ cursor: 'pointer', textDecoration: 'underline' }} onClick={() => props.onFormSwitch('register')}> Sign up for gamesight</span>
                 </div>
             </div>
         </div>
