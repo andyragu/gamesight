@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    Width: 580px;
     height: 100vh;
     background-color: transparent; /* Ensure there's no blue background */
 }
@@ -26,7 +27,7 @@
 
 label {
     color: white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;  /* Increase margin if needed */
 }
 
 input {
@@ -34,7 +35,9 @@ input {
     border: none;
     border-radius: 5px;
     width: 100%;
+    margin-bottom: 1rem;  /* Add some space between input fields */
 }
+
 
 .login-button {
     background-color: #FF61A6;  /* Pink Button Color */
@@ -44,7 +47,6 @@ input {
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    gap: 1.5rem;
 }
 
 .login-button:hover {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './Register.css';
+import './Login.css';  // Note: We are importing Login.css here
 
 export const Register = (props) => {
-    const [username, setUsername] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
@@ -11,12 +11,12 @@ export const Register = (props) => {
     }
 
     return (
-        <div className="login-container"> {/* This uses the same container class as Login for consistency */}
-            <div className="register-box">
+        <div className="login-container">
+            <div className="login-box">
                 <h2 className="login-title">Register for gamesight...</h2>
-                <form onSubmit = {handleSubmit} action="http://localhost:8000/collectData" method="post">
-                    <label htmlFor="username">Username</label>
-                    <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" id="username" name="username" />
+                <form onSubmit={handleSubmit} action="http://localhost:8000/collectData" method="post">
+                    <label htmlFor="name">Name</label>
+                    <input value={name} onChange={(e) => setName(e.target.value)} type="text" id="name" name="name" />
 
                     <label htmlFor="email">E-mail</label>
                     <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" id="email" name="email" />
@@ -31,3 +31,6 @@ export const Register = (props) => {
         </div>
     )
 }
+
+
+
