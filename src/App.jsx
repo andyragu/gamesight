@@ -1,23 +1,32 @@
-import React, { useEffect, useState } from "react";
-import { Login } from "./Components/Login";
-import { Register } from "./Components/register";
+import React, { useState } from "react";
+import { Login } from "./Components/userCreation/Login";
+import { Register } from "./Components/userCreation/Register";
 import MainPage from './Components/MainPage';
 
 function App() {
-  const [currentForm, setCurrentForm] = useState('main');  // Set default to main page
+    const [currentForm, setCurrentForm] = useState('main');  // Default to main page
 
-  const toggleForm = (formName) => {
-    setCurrentForm(formName);
-  }
+    const toggleForm = formName => {
+        setCurrentForm(formName);
+    }
 
-  return (
-    <div className="App">
-      {currentForm === 'login' && <Login onFormSwitch={toggleForm} />}
-      {currentForm === 'register' && <Register onFormSwitch={toggleForm} />}
-      {currentForm === 'main' && <MainPage onFormSwitch={toggleForm} />}
-    </div>
-  );
+    const renderForm = () => {
+        switch (currentForm) {
+            case 'login':
+                return <Login onFormSwitch={toggleForm} />;
+            case 'register':
+                return <Register onFormSwitch={toggleForm} />;
+            case 'main':
+            default:
+                return <MainPage onFormSwitch={toggleForm} />;
+        }
+    };
+
+    return (
+        <div className="App">
+            {renderForm()}
+        </div>
+    );
 }
 
 export default App;
-
