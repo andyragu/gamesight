@@ -5,8 +5,12 @@ function MainPage(props) {
     return (
         <div>
             <div className="header">
-                <h1>gamesight</h1>
-                <div className="login-option" onClick={() => props.onFormSwitch('login')}>Login</div>
+                <h1 className="namePage">Gamesight</h1>
+                <div className="right-options">
+                    <div className="about-option">about</div>
+                    <div className="howitworks-option">how it works</div>
+                    <div className="login-option" onClick={() => props.onFormSwitch('login')}>login</div>
+                </div>
             </div>
             <div className="middle-content">
                 <h2>SEE YOUR NEXT GAME</h2>
@@ -17,3 +21,4 @@ function MainPage(props) {
 }
 
 export default MainPage;
+ 

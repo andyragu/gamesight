@@ -33,26 +33,41 @@ body {
     position: absolute;
     color: white;
     font-family: 'Arial', sans-serif;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center; 
 }
 
-.header h1 {
-    font-size: 20px;
+.header .namePage {
+    font-size: 25px;
     color: white;
     text-shadow: 3px 0px 0px cyan, 2px 2px 0px rgb(255, 0, 212);
     font-family: 'Bernoru', sans-serif;
-    margin: 0 20px 0 0; /* shorthand for margin-right: 20px */
-    text-align: center;
-    display: flex;
-    align-items: center;
+    grid-column: 2; 
 }
 
-.header .login-option {
-    font-size: 10px;
+.header .right-options {
+    display: flex;
+    text-align: right;
+    grid-column: 3;
+    justify-self: end;
+    margin-right: 3.5%;
+    gap: 30px; 
+}
+
+.header .login-option, .about-option, .howitworks-option  {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: right;
+    align-self: center;
+    display: flex;
     cursor: pointer;
+    position: relative;
 }
 
 /* Middle content styles */
