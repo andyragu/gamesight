@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Login } from "./Components/userCreation/Login";
 import { Register } from "./Components/userCreation/Register";
-import MainPage from './Components/MainPage';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainPage from "./Components/pages/MainPage";
+import LoginPage from "./Components/pages/LoginPage";
 
 function App() {
-    const [currentForm, setCurrentForm] = useState('main');  // Default to main page
+    /*const [currentForm, setCurrentForm] = useState('main');  // Default to main page
 
     const toggleForm = formName => {
         setCurrentForm(formName);
@@ -20,12 +22,18 @@ function App() {
             default:
                 return <MainPage onFormSwitch={toggleForm} />;
         }
-    };
+    }; */
 
     return (
-        <div className="App">
-            {renderForm()}
-        </div>
+        //So this makes it so it sends you to different pages when using the specified path
+        <BrowserRouter>
+            <main>
+                <Routes>
+                    <Route path="/" element={<MainPage />}/>
+                    <Route path="/login" element={<LoginPage />}/>
+                </Routes>   
+            </main>
+        </BrowserRouter>
     );
 }
 
