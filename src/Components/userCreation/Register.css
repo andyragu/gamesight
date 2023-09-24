@@ -1,0 +1,45 @@
+.register-box {
+    background-color: black;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.register-button {
+    background-color: #FF61A6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #FF3D8D;
+}
+
+.register-text {
+    color: white;
+    margin-top: 1rem;
+}
+
+.register-text span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.register-text span:hover {
+    text-decoration: none;
+}
