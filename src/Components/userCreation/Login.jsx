@@ -15,7 +15,7 @@ export const Login = (props) => {
             <div className="login-box">
                 <h2 className="login-title">Log in to gamesight...</h2>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="email">E-mail</label>
+                    <label htmlFor="email">Email</label>
                     <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" id="email" name="email" />
 
                     <label htmlFor="password" style={{ marginTop: '1.5rem' }}>Password</label>
