@@ -1,0 +1,52 @@
+.AboutPage {
+    margin: 0;
+    font-family: 'Canva Sans', sans-serif;
+    background: linear-gradient(
+        #000000,#202029
+    );
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+    
+
+.header {
+    display: flex;
+    background-color: #000000; /* dark background color */
+    padding: 20px 20px; /* some padding around the navbar */ /* optional: a little shadow for depth */
+    margin-top: 0px;
+    margin-left: 0px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 3px 0px 0px cyan, 2px 2px 0px rgb(255, 0, 212);
+    font-family: 'Bernoru', sans-serif;
+    grid-column: 2; 
+}
+
+.About-Container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10rem;
+    border-radius: 15px;
+    width: 25%;
+    align-self: center;
+    flex-direction: column;
+    gap: .5rem;
+    height: 600px;
+    max-height: 100%;
+    width: 600px;
+    max-width: 100%;
+}
+
+.About-Title {
+    font-family: 'Fira Code', monospace;
+    color: #FF66C4;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+.About-Text{
+    font-family: 'Fira Code', monospace;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
