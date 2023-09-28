@@ -10,10 +10,10 @@
 }
 
 .login-box {
-    background-color: black;
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10rem;
     border-radius: 15px;
-    width: 50%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,11 +21,13 @@
 }
 
 .login-title {
+    font-family: 'Fira Code', monospace;
     color: white;
     margin-bottom: 2rem;
 }
 
 label {
+    font-family: Arial, sans-serif;
     color: white;
     margin-bottom: 1rem;  /* Increase margin if needed */
 }
@@ -54,6 +56,7 @@ input {
 }
 
 .register-text {
+    font-family: Arial, sans-serif;
     color: white;
     margin-top: 1rem;
 }

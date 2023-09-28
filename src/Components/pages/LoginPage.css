@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    font-family: 'Canva Sans', sans-serif;
+    background: linear-gradient(
+        #000000,#202029
+    );
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the main content vertically */
+}
+
+.LoginPage .header {
+    display: flex;
+    background-color: #000000; /* dark background color */
+    padding: 20px 20px; /* some padding around the navbar */ /* optional: a little shadow for depth */
+    margin-top: 0px;
+    margin-left: 0px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 3px 0px 0px cyan, 2px 2px 0px rgb(255, 0, 212);
+    font-family: 'Bernoru', sans-serif;
+    grid-column: 2; 
+}

@@ -1,14 +1,14 @@
 import React from 'react'
 import { Login } from '../userCreation/Login'
-
-const style = {
-  backgroundImage: 'linear-gratient(180deg, #000000, #202029)'
-};
+import './LoginPage.css'; 
 
 function LoginPage(props) {
 
   return (
-      <div className='LoginPage' style = {style}>
+      <div className='LoginPage'>
+        <div className="header">
+          Gamesight
+        </div>
         <Login/>
       </div>
   )
