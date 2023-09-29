@@ -86,6 +86,7 @@ section {
     display: flex;
     cursor: pointer;
     position: relative;
+    color: white;
 }
 
 /* Middle content styles */
@@ -126,7 +127,8 @@ section {
     font-family: 'Bernoru', sans-serif;
     top: 0;
     left: 0;
-    margin: 0;         /* to ensure there's no default margin */
+    margin: 0;
+    margin-top: 20px;         /* to ensure there's no default margin */
     padding: 10px; 
 }
 
