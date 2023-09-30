@@ -1,12 +1,15 @@
 import React from 'react'
 import './AboutPage.css'
+import { NavLink } from 'react-router-dom';
 
 function AboutPage() {
   return (
     <div className="AboutPage">
-        <div className="header">
+      <NavLink to="/" style={{ textDecoration: 'none' }}>
+        <div className="about-header">
           Gamesight
         </div>
+      </NavLink>
 
         <div className="About-Container">
             <h2 className="About-Title">About</h2>

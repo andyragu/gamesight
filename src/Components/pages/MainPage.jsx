@@ -1,16 +1,26 @@
 import React from 'react';
-import './MainPage.css'; 
+import './MainPage.css';
+import { NavLink } from 'react-router-dom';
+
 
 function MainPage(props) {
+
+
     return (
         <div class="container">
             <section class="one">
                 <div className="header">
                     <h1 className="namePage">Gamesight</h1>
                     <div className="right-options">
-                        <div className="about-option">about</div>
-                        <div className="howitworks-option">how it works</div>
-                        <div className="login-option" onClick={() => props.onFormSwitch('login')}>login</div>
+                        <NavLink to="/about" style={{ textDecoration: 'none' }}>
+                            <div className="about-option">about</div>
+                        </NavLink>
+                        <NavLink to="/about" style={{ textDecoration: 'none' }}>
+                            <div className="howitworks-option">how it works</div>
+                        </NavLink>
+                        <NavLink to="/login" style={{ textDecoration: 'none' }}>
+                            <div className="login-option">login</div>
+                        </NavLink>
                     </div>
                 </div>
                 <div className="middle-content">
