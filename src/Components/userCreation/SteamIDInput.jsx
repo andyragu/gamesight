@@ -1,33 +1,40 @@
-import React, { useState } from 'react';
+import axios from "axios";
+import { useState } from "react";
+
 
 function SteamIDInput() {
-    const [steamId, setSteamId] = useState('');
+  const [steamID, setsteamID] = useState({steamID: ""})
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const url = `https://your-api.com/steam/${steamId}`;
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error('Network response was not ok');
-            const data = await response.json();
-            console.log(data); // Handle the JSON object as needed
-        } catch (error) {
-            console.error('There was a problem with the fetch operation:', error);
-        }
-    }
+  const handleChange = (e) => {
+    const steamIDValue = e.target.value
+    setsteamID({steamID: steamIDValue})
+  }
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="steamId">Steam ID:</label>
-            <input
-                type="text"
-                id="steamId"
-                value={steamId}
-                onChange={(e) => setSteamId(e.target.value)}
-            />
-            <button type="submit">Submit</button>
-        </form>
-    );
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const steamIDData = { steamID: steamID };
+    axios
+    .post("http://localhost:3001/steamID", steamIDData).then((result) => {
+      console.log(result.status, result.data);
+      
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+  return (
+    <>
+    <div className="input-container">
+      <form onSubmit={handleSubmit}>
+        <input onChange={handleChange}  type="text" name="steamID" placeholder="Insert steamID" className="steamID-input" />
+        <button type="submit" className="submit-btn" >Submit</button>
+      </form>
+    </div>
+    </>
+  );
 }
 
+
+
 export default SteamIDInput;
+

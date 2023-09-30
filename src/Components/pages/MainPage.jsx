@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainPage.css';
+import SteamIDInput from '../userCreation/SteamIDInput';
 import { NavLink } from 'react-router-dom';
 
 function MainPage(props) {
@@ -24,6 +25,9 @@ function MainPage(props) {
                     <h2>SEE YOUR NEXT GAME</h2>
                     <NavLink to="/discover">
                         <button>DISCOVER</button>
+                    </NavLink>
+                    <NavLink to="/SteamID">
+                        <button>SteamID</button>
                     </NavLink>
                 </div>
             </section>
