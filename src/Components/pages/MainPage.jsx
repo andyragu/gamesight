@@ -2,13 +2,10 @@ import React from 'react';
 import './MainPage.css';
 import { NavLink } from 'react-router-dom';
 
-
 function MainPage(props) {
-
-
     return (
-        <div class="container">
-            <section class="one">
+        <div className="container">
+            <section className="one">
                 <div className="header">
                     <h1 className="namePage">Gamesight</h1>
                     <div className="right-options">
@@ -25,17 +22,19 @@ function MainPage(props) {
                 </div>
                 <div className="middle-content">
                     <h2>SEE YOUR NEXT GAME</h2>
-                    <button onClick={() => props.onFormSwitch('register')}>DISCOVER</button>
+                    <NavLink to="/discover">
+                        <button>DISCOVER</button>
+                    </NavLink>
                 </div>
             </section>
 
-            <section class="two">
+            <section className="two">
                 <div className="page-name">
                     <h2>Discover</h2>
                 </div>
             </section>
 
-            <section class="three">
+            <section className="three">
 
             </section>
         </div>
@@ -43,4 +42,3 @@ function MainPage(props) {
 }
 
 export default MainPage;
- 
