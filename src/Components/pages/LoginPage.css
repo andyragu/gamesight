@@ -49,3 +49,25 @@
     font-size: 0.75rem;
     font-weight: 100;
 }
+
+#login-steam {
+    font-size: 15px;
+    font-family: 'Fira Code', monospace;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #b91ab9;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+#login-steam:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.steam-image2 {
+    margin-right: 5px;
+}

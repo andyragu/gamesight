@@ -96,7 +96,7 @@ section {
 
 .header .steam-image {
     float: left;
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
 /* Middle content styles */
@@ -125,6 +125,7 @@ section {
 
 .middle-content button:hover {
     transform: scale(1.1);
+    cursor: pointer;
 } 
 
 #two{
